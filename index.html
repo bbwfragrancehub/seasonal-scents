@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ultimate Seasonal Scent Guide | Find Your Signature Fragrance</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #2c1a4a;
+  --secondary: #6a1b9a;
+  --accent: #d69a2d;
+  --light: #f8f5fc;
+  --dark: #1a1a2e;
+}
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.7;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+.wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  border-radius: 16px;
+}
+header h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 10px; }
+.subtitle { color: var(--accent); font-size: 1.1rem; margin-bottom: 20px; }
+.meta { font-size: 0.9rem; color: rgba(255,255,255,0.85); display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;}
+/* CONTENT */
+section { margin: 40px 0; background: #fff; padding: 35px; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.05); width: 100% !important; max-width: 100% !important;}
+h2 {font-family: 'Playfair Display', serif; color: var(--primary); font-size: 1.9rem; margin-bottom: 20px;}
+h3 {font-family: 'Playfair Display', serif; color: var(--secondary); font-size: 1.3rem; margin: 20px 0 10px;}
+p, li {margin-bottom: 18px; color: #444;}
+ul {padding-left: 20px; margin-bottom: 18px;}
+.image-placeholder { border: 2px dashed #ddd; border-radius: 10px; padding: 25px; text-align: center; margin: 20px 0; background: #fafafa; color: var(--primary);}
+.season-image { width: 100%; height: auto; border-radius: 10px; margin: 20px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
+.tip-box { background: var(--light); border-left: 4px solid var(--accent); padding: 15px 20px; border-radius: 8px; font-size: 0.95rem; margin: 25px 0; color: var(--primary);}
+.ritual-grid, .products { display: grid; gap: 20px; margin-top: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); width: 100% !important;}
+.ritual-card, .product { padding: 20px; background: #fafafa; border-radius: 10px; transition: background 0.3s; }
+.ritual-card:hover, .product:hover {background: #f1edf9;}
+.product-icon {font-size: 2rem; color: var(--primary); margin-bottom: 12px;}
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), #e6b646);
+  color: #fff;
+  padding: 14px 38px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 14px rgba(214, 154, 45, 0.3);
+  margin-top: 10px;
+}
+.btn:hover { background: linear-gradient(135deg, #e6b646, var(--accent)); box-shadow: 0 8px 20px rgba(214, 154, 45, 0.45); transform: translateY(-2px);}
+.btn:active { transform: translateY(1px) scale(0.98); box-shadow: 0 4px 10px rgba(214, 154, 45, 0.25);}
+footer { text-align: center; padding: 40px 20px; background: var(--primary); border-radius: 16px 16px 0 0; margin-top: 50px;}
+footer p {color: #fff;}
+.sample-box { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 20px; border-radius: 16px; background: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.08); max-width: 700px; margin: 0 auto 20px auto;}
+.sample-box-left { flex: 1 1 250px; display: flex; flex-direction: column; justify-content: center; min-width: 200px; }
+.sample-box-right { flex: 1 1 250px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; min-width: 200px; }
+.sample-item { background: #fafafa; border-radius: 12px; padding: 20px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); height: 120px; text-align: center;}
+.sample-icon {font-size: 2rem; color: var(--primary); margin-bottom: 8px;}
+.season-header { text-align: center; padding: 30px; border-radius: 16px; margin: 30px 0; color: white;}
+.spring {background: linear-gradient(135deg, #8BC34A, #4CAF50);}
+.summer {background: linear-gradient(135deg, #03A9F4, #00BCD4);}
+.autumn {background: linear-gradient(135deg, #FF9800, #F44336);}
+.winter {background: linear-gradient(135deg, #607D8B, #3F51B5);}
+@media (max-width: 768px){
+  header h1 {font-size: 2.2rem;}
+  h2 {font-size: 1.5rem;}
+  section {padding: 25px;}
+  .sample-box {flex-direction: column; align-items: center;}
+  .sample-box-right {grid-template-columns: repeat(2, 1fr);}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<header>
+  <h1>The Ultimate Seasonal Scent Guide</h1>
+  <p class="subtitle">Discover the perfect fragrance to match the mood of every season</p>
+  <div class="meta">
+    <span><i class="fas fa-user"></i> By The Scent Connoisseur</span>
+  </div>
+</header>
+
+<section class="sample-promo">
+  <h2>Find Your Signature Scent</h2>
+  <p>Embark on an olfactory journey with our curated discovery set of seasonal fragrances.</p>
+  <div class="sample-box">
+    <div class="sample-box-left">
+      <h3>Fragrance Discovery Kit</h3>
+      <p>Experience a quartet of our most captivating scents, each crafted to embody the essence of a season.</p>
+      <a href="https://rebrand.ly/bbw-free-samples" class="btn">Claim Your Free Sample Kit</a>
+    </div>
+    <div class="sample-box-right">
+      <div class="sample-item"><i class="fas fa-seedling sample-icon"></i><p>Verdant Spring</p></div>
+      <div class="sample-item"><i class="fas fa-sun sample-icon"></i><p>Solar Summer</p></div>
+      <div class="sample-item"><i class="fas fa-leaf sample-icon"></i><p>Amber Autumn</p></div>
+      <div class="sample-item"><i class="fas fa-snowflake sample-icon"></i><p>Cozy Winter</p></div>
+    </div>
+  </div>
+  <p style="margin-top: 15px; text-align: center;">Join our community of fragrance lovers and find your perfect seasonal match.</p>
+</section>
+
+<section>
+<p>Much like our wardrobes, our fragrances can—and should—evolve with the calendar. The same rich, spicy scent that feels comforting in December can feel overwhelmingly heavy in the heat of July. Adapting your perfume to the season isn't just a trend; it's an art form that harmonizes your aura with the rhythm of nature. This guide will help you navigate the best fragrances for each season, ensuring your scent is always in perfect sync with the world around you.</p>
+
+<div class="tip-box">
+<p><i class="fas fa-quote-left"></i> <strong>Did You Know?</strong> Temperature and humidity dramatically affect how a fragrance develops on your skin. Heat intensifies scents and makes them evaporate faster, while cold weather can mute their projection. This is the core reason for a seasonal fragrance wardrobe.</p>
+</div>
+
+<!-- SPRING -->
+<div class="season-header spring">
+<h2><i class="fas fa-seedling"></i> Spring: A Symphony of Renewal</h2>
+</div>
+<p>As the world awakens from its winter slumber, your fragrance should echo this sense of renewal. Spring calls for scents that are light, bright, and effervescent, mirroring the blooming flowers and fresh greenery.</p>
+<h3>Signature Notes:</h3>
+<ul>
+<li><strong>Floral:</strong> Peony, Lily of the Valley, Freesia, Lilac</li>
+<li><strong>Green:</strong> Fresh-cut grass, green leaves, tomato vine</li>
+<li><strong>Fruity:</strong> Bergamot, rhubarb, blackcurrant, juicy citrus</li>
+</ul>
+<img src="https://i.ibb.co/mrTfq6Gm/Spring-A-Symphony-of-Renewal.jpg" alt="Spring flowers and greenery" class="season-image">
+<h3>Fragrance Recommendation:</h3>
+<p><strong>Spring Fling</strong> by Dossier: A breathtaking blend of Lily of the Valley, green leaves, and transparent white flowers that captures the pure joy of floral freshness.</p>
+<p><strong>Classic Choice:</strong> A modern <strong>Eau de Cologne</strong> or a green, aromatic fragrance like Guerlain's <strong>Aqua Allegoria</strong> series.</p>
+
+<!-- SUMMER -->
+<div class="season-header summer">
+<h2><i class="fas fa-sun"></i> Summer: The Essence of Sunshine & Escape</h2>
+</div>
+<p>When the mercury rises, your fragrance should feel like a cool breeze and a splash of saltwater. Summer scents are all about freshness, aquatic tones, and a carefree, sunny disposition.</p>
+<h3>Signature Notes:</h3>
+<ul>
+<li><strong>Aquatic:</strong> Sea salt, ocean breeze, driftwood</li>
+<li><strong>Citrus:</strong> Bergamot, lemon, sweet orange, yuzu</li>
+<li><strong>Tropical:</strong> Coconut, tiare flower, frangipani, watermelon</li>
+</ul>
+<img src="https://i.ibb.co/845CX2r1/Summer.jpg" alt="Summer beach scene" class="season-image">
+<h3>Fragrance Recommendation:</h3>
+<p><strong>Summer Crush</strong> by Dossier: This scent transports you to the beach with a breezy accord, ylang ylang, coconut, and tiare flower, drying down to a creamy, sun-kissed vanilla.</p>
+<p><strong>Expert Tip:</strong> Opt for lighter concentrations like <strong>Eau de Toilette</strong> or <strong>Eau de Cologne</strong> in summer, as they are less likely to become overpowering in the heat.</p>
+
+<!-- AUTUMN -->
+<div class="season-header autumn">
+<h2><i class="fas fa-leaf"></i> Autumn: Warmth, Depth & Spice</h2>
+</div>
+<p>As the air turns crisp and the leaves change, your fragrance should provide warmth and comfort. Autumn is the season for richer, more complex scents that are earthy, spicy, and enveloping.</p>
+<h3>Signature Notes:</h3>
+<ul>
+<li><strong>Woody:</strong> Cedar, sandalwood, oakmoss, vetiver</li>
+<li><strong>Spicy:</strong> Cinnamon, cardamom, clove, pink pepper</li>
+<li><strong>Gourmand:</strong> Vanilla, tonka bean, cacao, almond</li>
+</ul>
+<img src="https://i.ibb.co/rRZ1hSW0/Autumn.jpg" alt="Autumn foliage and cozy scene" class="season-image">
+<h3>Fragrance Recommendation:</h3>
+<p><strong>Woody Chestnut</strong> or <strong>Spicy Vetiver</strong> layered with <strong>Sage & Black Tea</strong> for an earthy, mysterious aura perfect for autumn.</p>
+<p><strong>Classic Choice:</strong> A deep <strong>Chypre</strong> fragrance like <strong>Mitsouko</strong> or a woody oriental scent with oud.</p>
+
+<!-- WINTER -->
+<div class="season-header winter">
+<h2><i class="fas fa-snowflake"></i> Winter: Indulgent, Bold & Cocooning</h2>
+</div>
+<p>Winter demands fragrances that are as bold and dramatic as the weather outside. This is the time for opulent, rich, and sensual scents that create a protective, comforting cocoon.</p>
+<h3>Signature Notes:</h3>
+<ul>
+<li><strong>Oriental:</strong> Amber, vanilla, frankincense, myrrh</li>
+<li><strong>Gourmand:</strong> Chocolate, caramel, honey, spiced cocoa</li>
+<li><strong>Heady Florals:</strong> Tuberose, jasmine, black orchid</li>
+</ul>
+<img src="https://i.ibb.co/GQjPR7CS/Winter.jpg" alt="Winter landscape with cozy interior" class="season-image">
+<h3>Fragrance Recommendation:</h3>
+<p><strong>Winter Kiss</strong> by Dossier: The ultimate indulgence, this fragrance smells like a sip of spiced hot cocoa with notes of milky accord, chocolate, incense, cinnamon, and vanilla.</p>
+<p><strong>Application Tip:</strong> Perfume your scarf, hat, and coat! This helps the scent last longer and creates a beautiful scented trail as you move through the cold air.</p>
+
+<h2>Creating Your Seasonal Scent Wardrobe</h2>
+<p>Building a collection of seasonal fragrances is a personal and rewarding journey. Don't be afraid to experiment with layering scents to create something uniquely yours. A fresh spring floral can be given autumn-appropriate depth with a base of vanilla or amber.</p>
+<div class="tip-box">
+<p><i class="fas fa-lightbulb"></i> <strong>Pro Layering Tip:</strong> Start with a scented body lotion as a base to help your perfume last longer and project better, especially in the drier winter months.</p>
+</div>
+<p>Remember, the most important rule is to wear what makes you feel confident and joyful, no matter the season. Let your fragrance be an extension of yourself and a celebration of the ever-turning wheel of the year.</p>
+</section>
+
+<!-- ULTRA-PROFESSIONAL BUTTON ABOVE FOOTER -->
+<div style="text-align: center; margin: 40px 0;">
+  <a href="https://rebrand.ly/bbw-free-samples" class="btn" style="font-size: 1.3rem; padding: 18px 40px; border-radius: 50px;">Claim Your Free Sample Kit</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>Note: This is not the official Bath & Body Works website. This page provides links to Bath & Body Works samples through an affiliate program. Availability of free samples may vary and is subject to change without notice.</p>
+</footer>
+
+</div> <!-- End wrapper -->
+</body>
+</html>
